@@ -2,9 +2,12 @@
 
 这里提供 GPT 图像助手的 Windows 安装包与更新说明。开发源码保留在独立私密仓库；此仓库不包含开发历史。安装包包含运行所需的客户端代码，可被提取。
 
-**当前正式版本：0.6.2**
+**当前正式版本：0.6.3**
 
-[下载 0.6.2 完整安装包](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.6.2/GPT-Photoshop-Assistant-0.6.2-Setup.exe) · [发布说明与校验文件](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.6.2)
+0.6.3 修复 Photoshop 空输入框返回 null 时出现“功能导航失败”和保存配置未显示的问题。启动时先初始化表单再加载配置，未清理或自动覆盖已保存的 Key。空白草稿、精准修改、参考复刻、反馈和标注的同类空值问题一并修复。本机升级前后原配置文件与安全存储文件散列保持一致。
+
+
+[下载 0.6.3 完整安装包](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.6.3/GPT-Photoshop-Assistant-0.6.3-Setup.exe) · [发布说明与校验文件](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.6.3)
 
 界面保留 **运行 / key / 设置**。运行页提供六个任务入口，并新增 **全部能力**：34 项说明支持搜索和五类筛选，可查看使用条件、能力边界、费用、输出和示例，再进入对应功能。目录不会自动执行操作，也不会覆盖已有草稿。
 
@@ -26,7 +29,7 @@
 
 ## 验证与反馈
 
-0.6.2 的 **883/883 自动测试**、浏览器回归、30 项安装器核心自检及包检查通过。本机已通过 Adobe 官方流程安装，57 个插件文件和 24 个引擎文件核验一致。**Photoshop 原生交互与真实付费模型效果仍待人工验收；浏览器结果不替代宿主验收。**
+0.6.3 的 **898/898 自动测试**、浏览器回归、30 项安装器核心自检及包检查通过。本机已通过 Adobe 官方流程安装，57 个插件文件和 24 个引擎文件核验一致。**Photoshop 原生交互与真实付费模型效果仍待人工验收；浏览器结果不替代宿主验收。**
 
 “设置”底部可主动向作者提交反馈，也可复制备用。提交前请检查预览；诊断信息可选。反馈只在点击提交后发送，不自动上传图片或聊天记录。提交成功表示服务已接受发信，不等于收件箱回执。
 
