@@ -2,13 +2,15 @@
 
 这里提供 GPT 图像助手的 Windows 安装包与更新说明。开发源码保留在独立私密仓库；此仓库不包含开发历史。安装包包含运行所需的客户端代码，可被提取。
 
-**当前正式版本：0.7.1**
+**当前正式版本：0.7.2**
+
+0.7.2 修复“精准回填原位置”误触发释放剪贴蒙版的错误：仅对仍处于剪贴状态的结果层释放，保留回滚和选区外像素保护。
 
 0.7.1 修复创建文字时的 `ps.SolidColor is not a constructor` 错误，覆盖创建文字、改色与版式复刻文字层。
 
 0.7.0 新增“版式复刻 · 可编辑排版”：分别选择结构参考、风格参考和新主体素材，分析后编辑编号区域、文字及层序，再生成素材，由 Photoshop 创建图片层和原生文字层并放入一个组。改文字或位置可复用已有素材；结果先预览，再手动置入，支持重复置入。
 
-[下载 0.7.1 完整安装包](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.7.1/GPT-Photoshop-Assistant-0.7.1-Setup.exe) · [发布说明与校验文件](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.7.1)
+[下载 0.7.2 完整安装包](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.7.2/GPT-Photoshop-Assistant-0.7.2-Setup.exe) · [发布说明与校验文件](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.7.2)
 
 入口：**运行 → 参考图复刻 → 版式复刻 · 可编辑排版**。原整图模式仍可使用。首版每边最多 4096 px、总计最多 1600 万像素，背景加五个图片区域、八个文字层。上传素材不自动抠图，字体替代、背景残留与视觉相似度需人工检查。
 
@@ -32,7 +34,7 @@
 
 ## 验证与反馈
 
-0.7.1 的 953 项自动测试、Photoshop 27.0 严格 manifest 校验和 30 项安装器自检通过。独立原生测试面板被开发加载器拒绝，真实文字操作和 INTER 字体匹配待复测。本机 61 个插件文件、24 个引擎文件与包一致，原有配置散列保持。**这些检查不代替新增流程在 Photoshop 中的实机操作或模型生成效果验收。**
+0.7.2 的 956 项自动测试、Photoshop 27.0 严格 manifest 校验和 30 项安装器自检通过。已用本机 Adobe UXP 运行时代码确认剪贴命令行为。**这些检查不代替 Photoshop 中的真实回填操作或模型生成效果验收。**
 
 “设置”底部可主动向作者提交反馈，也可复制备用。提交前请检查预览；诊断信息可选。反馈只在点击提交后发送，不自动上传图片或聊天记录。提交成功表示服务已接受发信，不等于收件箱回执。
 
