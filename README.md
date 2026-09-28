@@ -2,22 +2,24 @@
 
 这里提供 GPT 图像助手的 Windows 安装包与更新说明。开发源码保留在独立私密仓库；此仓库不包含开发历史。安装包包含运行所需的客户端代码，可被提取。
 
-**当前正式版本：0.6.5**
+**当前正式版本：0.7.0**
 
-0.6.5 将 key 页两个下拉框明确标为“使用的 API 配置”和“新增配置的接口类型”：上方切换配置，下方仅在点击“添加配置”后创建新配置。反馈区及提交中状态不再显示收件人邮箱，反馈仍通过原服务发送给作者。原有 Key、模型设置及配置保存方式保持不变。
+新增“版式复刻 · 可编辑排版”：分别选择结构参考、风格参考和新主体素材，分析后编辑编号区域、文字及层序，再生成素材，由 Photoshop 创建图片层和原生文字层并放入一个组。改文字或位置可复用已有素材；结果先预览，再手动置入，支持重复置入。
 
-[下载 0.6.5 完整安装包](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.6.5/GPT-Photoshop-Assistant-0.6.5-Setup.exe) · [发布说明与校验文件](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.6.5)
+[下载 0.7.0 完整安装包](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.7.0/GPT-Photoshop-Assistant-0.7.0-Setup.exe) · [发布说明与校验文件](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.7.0)
 
-界面保留 **运行 / key / 设置**。运行页提供六个任务入口，并新增 **全部能力**：34 项说明支持搜索和五类筛选，可查看使用条件、能力边界、费用、输出和示例，再进入对应功能。目录不会自动执行操作，也不会覆盖已有草稿。
+入口：**运行 → 参考图复刻 → 版式复刻 · 可编辑排版**。原整图模式仍可使用。首版每边最多 4096 px、总计最多 1600 万像素，背景加五个图片区域、八个文字层。上传素材不自动抠图，字体替代、背景残留与视觉相似度需人工检查。
 
-本版同时包含精准局部修改、参考图分析复刻、本地 0–100% 效果强度和任务导航。AI 的可用能力由所配置模型与服务商决定；参考复刻和分层不承诺恢复原始 PSD，生成质量也不等于原生分辨率。
+界面保留 **运行 / key / 设置**。运行页提供六个任务入口，**全部能力**提供 34 项说明与搜索，可查看使用条件、能力边界、费用、输出和示例。目录不会自动执行操作，也不会覆盖已有草稿。
+
+本版包含精准局部修改、整图分析复刻、版式复刻、本地 0–100% 效果强度和任务导航。AI 能力取决于所配置模型及服务商；参考复刻和分层不承诺恢复原始 PSD，生成质量也不等于原生分辨率。
 
 ## 安装条件
 
-- Windows，Photoshop 27.0 或以上，Creative Cloud Desktop 提供的 Adobe UPIA 安装组件。**PS 2018 不兼容。**
+- Windows、Photoshop 2026（27.0）或更新版本，以及 Creative Cloud Desktop 提供的 Adobe UPIA 安装组件。**PS 2018 不兼容。**
 - 先保存文档并退出 Photoshop，再双击 Setup.exe；需要确认 Windows 管理员权限提示。安装器不会强制关闭 PS，目前未签署商业代码签名证书。
 - 完整安装器约 68.1 MB，包含插件、便携 Node.js、Real-ESRGAN 基础模型和本机图像辅助程序，无需另装 Node.js 或 UXP 开发工具。
-- 不包含 Photoshop、Creative Cloud、API Key、聊天记录、用户图片或可选大型模型。其它电脑需自行填写 API 配置；SUPIR、ControlNet、GFPGAN / CodeFormer 等需另行安装配置。
+- 不含 Photoshop、Creative Cloud、API Key、聊天记录、用户图片或可选大型模型。其它电脑需自行填写 API 配置；SUPIR、ControlNet、GFPGAN / CodeFormer 等需另行安装配置。
 - 本机升级保留已有 Key 与模型配置。安装完成后，从 Photoshop“增效工具 → GPT 图像助手”打开。
 
 ## 后续更新
@@ -28,10 +30,10 @@
 
 ## 验证与反馈
 
-0.6.5 的反馈、启动与引擎定向检查 39 项、设置反馈浏览器 8 组、窄面板布局压力检查、Photoshop 27.0 严格 manifest 校验和 30 项安装器核心自检通过。57 个插件文件、24 个引擎文件与源码/发布包相符。**浏览器检查不替代 Photoshop 原生显示验收。**
+0.7.0 的 952 项自动测试、78 个浏览器检查点、Photoshop 27.0 严格 manifest 校验和 30 项安装器自检通过。本机 61 个插件文件、24 个引擎文件与包一致，原有配置散列保持。**这些检查不代替新增流程在 Photoshop 中的实机操作或模型生成效果验收。**
 
 “设置”底部可主动向作者提交反馈，也可复制备用。提交前请检查预览；诊断信息可选。反馈只在点击提交后发送，不自动上传图片或聊天记录。提交成功表示服务已接受发信，不等于收件箱回执。
 
 插件内提交需能够访问 Google Apps Script 及其响应服务。网络不可达时可复制反馈备用。
 
-安装包附带所用第三方组件的许可。GitHub 自动提供的 Source code 压缩包只包含此仓库的说明文件，安装请下载以 `-Setup.exe` 结尾的文件。
+安装包附带第三方组件许可。GitHub 自动提供的 Source code 压缩包只包含本仓库的说明文件；安装请下载以 `-Setup.exe` 结尾的文件。
