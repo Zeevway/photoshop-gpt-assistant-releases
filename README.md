@@ -2,11 +2,11 @@
 
 本仓库提供 Windows 安装包与更新说明。项目源码保留在独立私密仓库；安装包内的客户端代码可被提取，不应把安装包视为保密载体。
 
-**当前正式版本：0.7.4**
+**当前正式版本：0.7.5**
 
-修复 AI 抠图读取临时 PNG 时的色彩配置报错。仅恢复插件自有临时图片的已知 sRGB 配置，不修改原画布；保留像素和透明度校验。来源读取或任务启动失败后直接结束本轮，显示具体原因，不再继续模型对话。
+比例不符的 AI 抠图蒙版现在可以保留并本地对齐。提供“按参考画框对齐”和“按原图对齐”，显示接口蒙版、参考画框与原图尺寸；检查当前预览并勾选确认后再置入。本地处理不调用 AI、不缩放原图，切换方案需重新检查边缘。
 
-[下载 0.7.4 完整安装包](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.7.4/GPT-Photoshop-Assistant-0.7.4-Setup.exe) · [发布说明与校验文件](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.7.4)
+[下载 0.7.5 完整安装包](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.7.5/GPT-Photoshop-Assistant-0.7.5-Setup.exe) · [发布说明与校验文件](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.7.5)
 
 ## 当前功能
 
@@ -34,6 +34,6 @@ AI 抠图由 AI 生成主体灰度蒙版，Photoshop 保留原图像素，输出
 
 ## 验证范围
 
-0.7.4 的 998 项自动测试及 30 项安装器自检通过。本机安装文件和 8 个原有配置/安全存储文件已核验。Adobe 官方打包时 PS 已关闭，未执行严格宿主校验；Windows 界面控制连接不可用，未完成真实 Photoshop 及 AI 蒙版效果复测。这些检查不代表实机效果已验收。
+0.7.5 的 1019 项自动测试、260/320 px 浏览器回归及 30 项安装器自检通过。本机已安装，61 个插件文件、24 个引擎文件与发布包一致，8 个既有配置/安全存储文件未改变。Adobe 官方打包时 PS 未连接，未执行严格宿主校验；真实 Photoshop 交互和 AI 人物边缘效果仍须复测。本地映射基于坐标假设，不能证明 AI 未移动或裁切主体。旧版已经丢弃的蒙版无法恢复，更新会释放会话临时素材。
 
 安装包附带第三方许可证。GitHub 自动提供的 Source code 压缩包只包含此公开仓库说明；安装请使用 `-Setup.exe` 文件。
