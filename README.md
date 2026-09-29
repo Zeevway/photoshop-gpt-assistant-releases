@@ -1,39 +1,19 @@
 # GPT 图像助手 · 安装包与更新
 
-本仓库提供 Windows 安装包与更新说明。项目源码保留在独立私密仓库；安装包内的客户端代码可被提取，不应把安装包视为保密载体。
+Photoshop 插件的公开下载与更新源。源码仓库保持私密；这里仅发布安装器及校验文本。安装包包含可提取的客户端代码，不是源码保密措施。
 
-**当前正式版本：0.7.6**
+## 最新版本：0.7.7
 
-修正 AI 蒙版请求的输出要求，明确白色主体、黑色背景及灰度覆盖边缘。格式不符的返回图保留供查看，并显示实际尺寸及读取后的颜色/透明度诊断；失败操作不再显示绿色完成，也不继续模型对话。重新请求 AI 明确提示可能计费。通用图片模型仍可能忽略格式，本版不能保证每次抠图成功。
+[下载 Windows 完整安装器](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.7.7/GPT-Photoshop-Assistant-0.7.7-Setup.exe) · [查看更新说明](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.7.7) · [SHA-256](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.7.7/GPT-Photoshop-Assistant-0.7.7-Setup-SHA256.txt)
 
-[下载 0.7.6 完整安装包](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.7.6/GPT-Photoshop-Assistant-0.7.6-Setup.exe) · [发布说明与校验文件](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.7.6)
+0.7.7 修复蒙版诊断跨 Photoshop 异常边界丢失，恢复返回图预览；对于符合严格条件的近灰度蒙版，提供本地去偏色与对齐候选。候选需查看并确认边缘，原图像素保持不变，不会自动发起新的 AI 请求。明显彩色、透明彩照及缺少有效黑白区域的结果仍不能走这条恢复路径。
 
-## 当前功能
+1058 项自动测试、260/320 px 卡片浏览器检查和 30 项安装器核心检查通过。本机安装文件及配置保留已核验；真实 Photoshop 交互和 AI 蒙版效果仍需复测。统计条件不能保证主体识别正确。
 
-界面分为 **运行 / key / 设置**。运行页提供七个任务入口，“全部能力”提供 35 项说明，可查看条件、输出、费用与边界；目录导航不会自动执行操作。
+## 安装与更新
 
-支持 AI 生图与编辑、附件标注与置入、精准局部修改、AI 抠图、参考图分析与复刻、分层、版式复刻及已支持的 Photoshop 文字/图层操作。图片可先预览再手动置入，支持再次置入。key 页支持多个 GPT、Gemini 等服务商配置。
+需要 Windows x64、Photoshop 2026（27.0）或更新版本，以及管理员安装权限。先保存文档并退出 Photoshop，再运行完整安装器。更新不会清空已保存的 API 配置，但会释放当前会话素材。
 
-AI 抠图由 AI 生成主体灰度蒙版，Photoshop 保留原图像素，输出独立组和可编辑蒙版。支持当前画布/图层，要求 RGB 8 位 sRGB，每边最多 4096 px、最多 1600 万像素，按原尺寸置入。原图层保持可见，可手动隐藏背景观察透明效果。不是原生通道运算，边缘须人工检查。
+安装包内含本机高清引擎和 Real-ESRGAN 基础模型。API 功能需自行配置服务商 Key 和可用接口；可选模型需要另外安装，硬件要求随模型而异。包内不包含作者的 Key、配置、聊天或图片。
 
-版式复刻可分别指定结构、风格和新主体，编辑区域与准确文案，再由 Photoshop 合成图片层和原生文字层。参考复刻与拆层不承诺恢复原始 PSD；本地增强尺寸不等于原生分辨率。模型输出与费用由使用的接口决定。
-
-## 安装条件
-
-- Windows、Photoshop 2026（27.0）或更新版本，以及 Creative Cloud Desktop 提供的 Adobe UPIA 安装组件。PS 2018 不兼容。
-- 保存文档并退出 Photoshop 后，双击 Setup.exe，按提示确认管理员权限。安装器不会强制关闭 PS；当前未签商业代码签名证书。
-- 完整安装包约 68.2 MB，内含插件、便携 Node.js、Real-ESRGAN 基础模型和本地图像处理程序，无需另装 Node.js 或 UXP 开发工具。
-- 不包含 Photoshop、Creative Cloud、API Key、用户图片、聊天记录及可选大型模型。SUPIR、ControlNet、GFPGAN / CodeFormer 需另行安装配置。
-- 更新保留 Key 和已有模型配置。完成后从 Photoshop“增效工具 → GPT 图像助手”打开。
-
-## 更新与反馈
-
-0.5.4 起可在 **设置 → 插件更新** 检查更新；0.5.0–0.5.3 的入口在 key 页。更新不需要登录 GitHub，不使用模型 Key；客户端核验版本、资产来源、大小与 SHA-256 后打开安装器。安装时仍须退出 Photoshop。
-
-设置页底部可填写并提交反馈，也可复制备用。提交前会预览内容与脱敏诊断，只有点击提交才发送，不自动上传图片或聊天记录。提交成功表示服务已接受发信，不保证收件箱投递；Google Apps Script 服务不可达时可复制反馈。
-
-## 验证范围
-
-0.7.6 的 1041 项自动测试、260/320 px 浏览器回归及 30 项安装器自检通过。本机已安装，62 个插件文件、24 个引擎文件与发布包一致，8 个既有配置/安全存储文件未改变。Adobe 官方打包时 PS 未连接，未执行严格宿主校验；真实 Photoshop 与 AI 人物边缘效果仍须复测。图片格式与像素校验不能证明分割语义正确。0.7.5 的本地比例对齐继续保留。旧版已丢弃的返回图无法恢复，更新会释放会话临时素材。
-
-安装包附带第三方许可证。GitHub 自动提供的 Source code 压缩包只包含此公开仓库说明；安装请使用 `-Setup.exe` 文件。
+已支持更新的插件可在“设置 → 插件更新”检查并下载安装；下载更新无需访问私密源码仓库或提供 GitHub Token。
