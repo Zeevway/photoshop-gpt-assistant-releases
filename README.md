@@ -2,13 +2,13 @@
 
 Photoshop 插件的公开下载与更新源。源码仓库保持私密；这里只发布安装器及校验文本。安装包包含可提取的客户端代码，不是源码保密措施。
 
-## 最新版本：0.8.3
+## 最新版本：0.8.4
 
-[下载 Windows 完整安装器](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.3/GPT-Photoshop-Assistant-0.8.3-Setup.exe) · [查看更新说明](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.8.3) · [SHA-256](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.3/GPT-Photoshop-Assistant-0.8.3-Setup-SHA256.txt)
+[下载 Windows 完整安装器](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.4/GPT-Photoshop-Assistant-0.8.4-Setup.exe) · [查看更新说明](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.8.4) · [SHA-256](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.4/GPT-Photoshop-Assistant-0.8.4-Setup-SHA256.txt)
 
-0.8.3 汇总三版修补：能力导航默认收起，API 页签名称更清楚，操作记录单独查看；Photoshop 人物抠图采用主体定位结合通道柔边；AI 蒙版轻微偏色和小幅比例误差可在本地生成待确认预览，不自动追加图片请求。本版修正稀疏偏色蒙版被单点色差门槛拒绝的问题，仍需检查人物位置和发丝边缘后采用。
+0.8.4 采用 Apple 风格的深色界面，提供分段导航、分组设置和按需展开的高级选项。结果卡优先展示图片、边缘确认及置入操作；已有 API 配置与草稿保留，原有 AI/PS 调用和置入确认规则不变。
 
-1177 项自动测试、30 项安装器检查和窄面板浏览器检查通过，70 个插件文件与 24 个引擎文件核验一致。真实 Photoshop 文档与模型视觉质量仍须验收；统计校验不能证明人物识别准确。Photoshop 主体定位遵循其设备/云端设置，不是纯通道算法，也不保证最佳抠图效果。
+1191 项自动测试、30 项安装器检查和窄面板浏览器检查通过，72 个插件文件与 24 个引擎文件核验一致。真实 Photoshop 原生显示及文档操作仍须验收；本次界面更新不代表模型或抠图效果提高。
 
 ## 安装与更新
 
@@ -16,4 +16,4 @@ Photoshop 插件的公开下载与更新源。源码仓库保持私密；这里�
 
 安装包内含本机高清引擎和 Real-ESRGAN 基础模型。API 功能需要自行配置服务商 Key 和可用接口；可选模型需要另外安装，硬件要求随模型而异。包内不包含作者的 Key、配置、聊天或图片。
 
-已支持更新的插件可在“设置 → 插件更新”检查并下载安装；下载更新无需访问私密源码仓库或提供 GitHub Token。
+已支持更新的插件可在「设置 → 插件更新」检查并下载安装；下载更新无需访问私密源码仓库或提供 GitHub Token。
