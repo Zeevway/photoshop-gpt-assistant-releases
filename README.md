@@ -2,13 +2,13 @@
 
 Photoshop 插件的公开下载与更新源。源码仓库保持私密；这里只发布安装器及校验文本。安装包包含可提取的客户端代码，不是源码保密措施。
 
-## 最新版本：0.8.4
+## 最新版本：0.8.5
 
-[下载 Windows 完整安装器](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.4/GPT-Photoshop-Assistant-0.8.4-Setup.exe) · [查看更新说明](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.8.4) · [SHA-256](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.4/GPT-Photoshop-Assistant-0.8.4-Setup-SHA256.txt)
+[下载 Windows 完整安装器](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.5/GPT-Photoshop-Assistant-0.8.5-Setup.exe) · [查看更新说明](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.8.5) · [SHA-256](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.5/GPT-Photoshop-Assistant-0.8.5-Setup-SHA256.txt)
 
-0.8.4 采用 Apple 风格的深色界面，提供分段导航、分组设置和按需展开的高级选项。结果卡优先展示图片、边缘确认及置入操作；已有 API 配置与草稿保留，原有 AI/PS 调用和置入确认规则不变。
+0.8.5 修正 Apple 风格界面在 Photoshop 原生控件中的显示差异：折叠标题与展开按钮分开，导航更紧凑，输入框限制在面板宽度内并去除多余外框。能力定位、已保存配置及未保存草稿保留。
 
-1191 项自动测试、30 项安装器检查和窄面板浏览器检查通过，72 个插件文件与 24 个引擎文件核验一致。真实 Photoshop 原生显示及文档操作仍须验收；本次界面更新不代表模型或抠图效果提高。
+1195 项自动测试、30 项安装器检查和窄面板浏览器检查通过，72 个插件文件与 24 个引擎文件核验一致。真实 Photoshop 原生显示仍须复核；本次界面修正不代表模型或抠图效果提高。
 
 ## 安装与更新
 
