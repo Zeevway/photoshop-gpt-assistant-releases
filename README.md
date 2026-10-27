@@ -2,19 +2,17 @@
 
 Photoshop 插件的公开下载与更新源。源码仓库保持私密；这里只发布安装器及校验文本。安装包包含可提取的客户端代码，不是源码保密措施。
 
-## 最新版本：0.8.6
+## 最新版本：0.8.20
 
-[下载 Windows 完整安装器](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.6/GPT-Photoshop-Assistant-0.8.6-Setup.exe) · [查看更新说明](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.8.6) · [SHA-256](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.6/GPT-Photoshop-Assistant-0.8.6-Setup-SHA256.txt)
+[下载 Windows 完整安装器](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.20/GPT-Photoshop-Assistant-0.8.20-Setup.exe) · [查看更新说明](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.8.20) · [SHA-256](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.20/GPT-Photoshop-Assistant-0.8.20-Setup-SHA256.txt)
 
-0.8.6 在「设置 → 用户反馈」增加图片附件。可以主动添加 PNG、JPG 或 JPEG 截图，检查缩略图并逐张移除，再与反馈文字一起提交。最多 3 张，单张 5 MiB、合计 10 MiB；界面以 MB 显示。取消或提交失败保留草稿，复制反馈只复制文字，重试保持原请求编号。
+0.8.20 修复 AI 抠图已经生成并通过自动效果检查，却在写入 Photoshop 的最终校验阶段报 `Unsupported layer type（错误码 1）` 的问题。插件现在会隔离新建的结果组并读取文档合成画面完成校验，不再直接读取 Photoshop 组图层；校验结束后恢复原有图层可见性，任何步骤失败仍会回滚，不留下半成品。
 
-图片保留原始字节，不自动遮挡敏感信息或移除内部元数据；请先处理截图中的 Key、账号等信息。上传使用通用文件名，不发送原文件名和本地路径。添加图片不会读取 Photoshop 画布或聊天附件，也不会调用 AI 或自动发送。
+1,721 项自动测试、21 组浏览器回归及 39 项安装器自检全部通过。本机已安装 0.8.20；88 个插件文件与 CCX、24 个引擎文件与引擎包逐项一致，升级前后 12 个配置及安全存储文件未变。
 
-1232 项自动测试、语法和 manifest 检查、3 组浏览器回归及 30 项安装器自检通过。2026-10-08 本机已安装 0.8.6；74 个插件文件与 24 个引擎文件和安装包核验一致，升级前后 8 个配置及安全存储文件未变。
+本轮构建、测试和安装没有调用用户 Key 或付费图片接口。回归测试覆盖截图中的 `Unsupported layer type` 分支；真实远程蒙版质量与 Photoshop 原生画布结果仍需在实际素材上复测。
 
-线上服务已部署 Apps Script 代码版本 3，并通过不发信的匿名附件能力检查。本轮未进行真实 POST、未发送测试邮件、未核对收件箱，Photoshop 原生选图与显示仍待验收。成功发信回执也不代表邮件已进入收件箱或作者已阅读。
-
-完整安装器大小为 68206592 字节，SHA-256 为 `F34607047D87700CA95299EA2E2017EB80221F2AC310C093098FE9FF7ED87E63`。
+完整安装器大小为 68,306,944 字节，SHA-256 为 `9BE5C5DE492FA67A235671961662400083FB0AACA6515B2C342A198D98F161BB`。
 
 ## 安装与更新
 
