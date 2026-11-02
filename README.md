@@ -2,17 +2,17 @@
 
 Photoshop 插件的公开下载与更新源。源码仓库保持私密；这里只发布安装器及校验文本。安装包包含可提取的客户端代码，不是源码保密措施。
 
-## 最新版本：0.8.20
+## 最新版本：0.8.28
 
-[下载 Windows 完整安装器](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.20/GPT-Photoshop-Assistant-0.8.20-Setup.exe) · [查看更新说明](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.8.20) · [SHA-256](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.20/GPT-Photoshop-Assistant-0.8.20-Setup-SHA256.txt)
+[下载 Windows 完整安装器](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.28/GPT-Photoshop-Assistant-0.8.28-Setup.exe) · [查看更新说明](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/tag/v0.8.28) · [SHA-256](https://github.com/Zeevway/photoshop-gpt-assistant-releases/releases/download/v0.8.28/GPT-Photoshop-Assistant-0.8.28-Setup-SHA256.txt)
 
-0.8.20 修复 AI 抠图已经生成并通过自动效果检查，却在写入 Photoshop 的最终校验阶段报 `Unsupported layer type（错误码 1）` 的问题。插件现在会隔离新建的结果组并读取文档合成画面完成校验，不再直接读取 Photoshop 组图层；校验结束后恢复原有图层可见性，任何步骤失败仍会回滚，不留下半成品。
+0.8.28 交付三项交互可靠性修复：审核允许的最终生成结果可从结果卡手动置入，不同字节的对比原图在存储边界保持阻断、不能借用最终结果的审核；输入框随内容和面板尺寸同步高度，返回运行页时重新测量；标注画布支持以指针为中心的 25%–800% 滚轮缩放及中键临时平移，缩放平移后可继续绘制、保存与重新打开。置入按钮与提示明确绑定"审核后结果"，即使正在查看原图也不会误置入。
 
-1,721 项自动测试、21 组浏览器回归及 39 项安装器自检全部通过。本机已安装 0.8.20；88 个插件文件与 CCX、24 个引擎文件与引擎包逐项一致，升级前后 12 个配置及安全存储文件未变。
+1,941 项自动测试、4 个浏览器回归套件及 39 项安装器自检全部通过。本机已安装 0.8.28；91 个插件文件与 CCX、24 个引擎文件与引擎包逐项一致，升级前后 12 个配置及安全存储文件未变。
 
-本轮构建、测试和安装没有调用用户 Key 或付费图片接口。回归测试覆盖截图中的 `Unsupported layer type` 分支；真实远程蒙版质量与 Photoshop 原生画布结果仍需在实际素材上复测。
+本轮构建、测试和安装没有调用用户 Key 或付费图片接口。Photoshop 原生实机交互验收因 Photoshop 2026 丢弃自动化合成键盘输入而以自动化证据替代；真实模型输出与原生交互仍建议在实际素材上确认。
 
-完整安装器大小为 68,306,944 字节，SHA-256 为 `9BE5C5DE492FA67A235671961662400083FB0AACA6515B2C342A198D98F161BB`。
+完整安装器大小为 68,326,400 字节，SHA-256 为 `02D39FA786F8359D736E149CB53ECD2ECC31E58740FE4415E689CD448C0C20A0`。
 
 ## 安装与更新
 
